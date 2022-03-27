@@ -1,1 +1,115 @@
 /* You can add global styles to this file, and also import other style files */
+
+// For default Margin
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+// For Font Family
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+}
+
+html , body {
+  height: 100%;
+
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-flex;
+  padding: 12px 22px;
+  background-color: rgba(black , 0.7);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  border: none;
+
+  &:hover {
+    background: rgba(black , 0.78);
+    backdrop-filter: blur(2px);
+  }
+
+  &:active {
+    background: rgba(black , 0.85);
+  }
+}
+
+.btns-container {
+  display: flex;
+  margin-top: 20px;
+  margin: auto;
+  gap: 12px;
+
+  &.btns-centered {
+    justify-content: center;
+  }
+
+  .align-end {
+    margin-left: auto
+  }
+}
+
+.has-blurred-white-bg {
+  background: rgba(white , 0.8) ;
+  backdrop-filter: blur(20px);
+}
+
+h1.is-bold,
+h2.is-bold {
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.textbox {
+  display: block;
+  font-size: 18px;
+  font-family: inherit;
+  width: 100%;
+  padding: 8px 10px;
+  background-color: rgba(white , 0.9);
+  border: 2px solid rgba(black , 0.3);
+  border-radius: 4px;
+
+
+  &:hover {
+    background-color: rgba(white , 0.95);
+  }
+
+  &:focus {
+    background-color: white;
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: rgba(black , 0.42);
+  }
+}
+
+a {
+  text-decoration: none;
+}

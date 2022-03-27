@@ -1,0 +1,45 @@
+.usersInfo-wrapper {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.users-card {
+  background-color: rgba(black , 0.5);
+  color: rgba(white,0.59);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 25px;
+  margin-top: 15px;
+  transition: 0.2s;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  &:hover {
+    background-color: rgba(black , 0.68);
+    backdrop-filter: blur(2px);
+  }
+
+}
+
+.user-card-image img{
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.user-card-name , .user-card-code {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.add-btn i {
+  margin-left: 10px;
+}
+
+.add-btn {
+  margin: 20px;
+}

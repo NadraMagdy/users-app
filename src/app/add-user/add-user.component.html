@@ -1,0 +1,62 @@
+<div class="add-user-wrapper container has-blurred-white-bg">
+  <h2 class="is-bold">New User</h2>
+
+  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+    <!-- IMG PATH -->
+    <div class="form-field">
+      <input
+        class="textbox"
+        ngModel
+        #imgField="ngModel"
+        name="imagePath"
+        type="text"
+        required
+        placeholder="Enter You Image Path"
+      />
+      <ng-container *ngIf="showValidationErrors && imgField.invalid">
+        <p>- Please Enter Your Image Path!</p>
+      </ng-container>
+    </div>
+
+    <!-- NAME -->
+    <div class="form-field">
+      <input
+        class="textbox"
+        ngModel
+        name="name"
+        type="text"
+        required
+        placeholder="Enter You Name"
+        #nameField="ngModel"
+      />
+
+      <ng-container *ngIf="showValidationErrors && nameField.invalid">
+        <p>- Please Enter Your Name!</p>
+      </ng-container>
+
+    </div>
+
+    <!-- CODE -->
+    <div class="form-field">
+      <input
+        class="textbox"
+        ngModel
+        name="code"
+        type="text"
+        required
+        placeholder="Enter You Code"
+        #codeField="ngModel"
+      />
+
+      <ng-container *ngIf="showValidationErrors && codeField.invalid">
+        <p>- Please Enter Your Code!</p>
+      </ng-container>
+
+    </div>
+
+    <div class="btns-container">
+      <a routerLink="../" class="btn">Cancel</a>
+      <button class="btn align-end">Create</button>
+    </div>
+  </form>
+</div>

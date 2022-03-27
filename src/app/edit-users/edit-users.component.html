@@ -1,0 +1,66 @@
+<div class="edit-user-wrapper container has-blurred-white-bg">
+  <h2 class="is-bold">Edit User</h2>
+
+  <p *ngIf="!user">User Not Found!</p>
+
+  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)" *ngIf="user">
+    <!-- IMG PATH -->
+    <div class="form-field">
+      <input
+        class="textbox"
+        [ngModel]="user?.imagePath"
+        #imgField="ngModel"
+        name="imagePath"
+        type="text"
+        required
+        placeholder="Enter You Image Path"
+      />
+
+      <ng-container *ngIf="showValidationErrors && imgField.invalid">
+        <p>- Please Enter Your Image Path!</p>
+      </ng-container>
+    </div>
+
+    <!-- NAME -->
+    <div class="form-field">
+      <input
+        class="textbox"
+        [ngModel]="user?.name"
+        name="name"
+        type="text"
+        required
+        placeholder="Enter You Name"
+        #nameField="ngModel"
+      />
+
+      <ng-container *ngIf="showValidationErrors && nameField.invalid">
+        <p>- Please Enter Your Name!</p>
+      </ng-container>
+
+    </div>
+
+    <!-- CODE -->
+    <div class="form-field">
+      <input
+        class="textbox"
+        [ngModel]="user?.code"
+        name="code"
+        type="text"
+        required
+        placeholder="Enter You Code"
+        #codeField="ngModel"
+      />
+
+      <ng-container *ngIf="showValidationErrors && codeField.invalid">
+        <p>- Please Enter Your Code!</p>
+      </ng-container>
+
+    </div>
+
+    <div class="btns-container">
+      <a routerLink="../" class="btn">Cancel</a>
+      <button type="button" class="btn" (click)="deleteUser()">Delete</button>
+      <button class="btn align-end">Save</button>
+    </div>
+  </form>
+</div>
