@@ -7,15 +7,9 @@ import { User } from './user.model';
 export class UserService {
   users: User[] = [];
 
-  // storageListenSub: Subscription;
-
   constructor() {
     this.loadState();
   }
-
-  // ngOnDestroy(): void {
-  //   if(this.storageListenSub) this.storageListenSub.unsubscribe();
-  // }
 
   getUsers() {
     return this.users;
@@ -53,7 +47,7 @@ export class UserService {
   loadState() {
     try {
 
-      const usersInStorage = JSON.parse(localStorage.getItem('users') || '{}');
+      const usersInStorage = JSON.parse(localStorage.getItem('users') || '[]');
       if (!usersInStorage) return;
       this.users = usersInStorage;
 
